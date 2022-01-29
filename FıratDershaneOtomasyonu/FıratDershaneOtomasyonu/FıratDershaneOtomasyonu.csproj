@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54B8EF0C-53C2-4B2A-B753-2A93DBAA7A90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FıratDershaneOtomasyonu</RootNamespace>
+    <AssemblyName>FıratDershaneOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimasyonluGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimasyonluGiris.Designer.cs">
+      <DependentUpon>AnimasyonluGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baglanSınıfı.cs" />
+    <Compile Include="Connected Services\kimlik\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseClass.cs" />
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciIslemleri.Designer.cs">
+      <DependentUpon>frmOgrenciIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgrenciListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciListele.Designer.cs">
+      <DependentUpon>frmOgrenciListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOğretmenListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOğretmenListesi.Designer.cs">
+      <DependentUpon>frmOğretmenListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelListesi.Designer.cs">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUygulamaGirisAyarları.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUygulamaGirisAyarları.Designer.cs">
+      <DependentUpon>frmUygulamaGirisAyarları.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frYöneticiVeYetkiliGirism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frYöneticiVeYetkiliGirism.Designer.cs">
+      <DependentUpon>frYöneticiVeYetkiliGirism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FıratDershaneOtomasyonDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FıratDershaneOtomasyonDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciSilme.Designer.cs">
+      <DependentUpon>OgrenciSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciUcretIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciUcretIslemleri.Designer.cs">
+      <DependentUpon>OgrenciUcretIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifremiUnuttum.Designer.cs">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimasyonluGiris.resx">
+      <DependentUpon>AnimasyonluGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciIslemleri.resx">
+      <DependentUpon>frmOgrenciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciListele.resx">
+      <DependentUpon>frmOgrenciListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOğretmenListesi.resx">
+      <DependentUpon>frmOğretmenListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelListesi.resx">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUygulamaGirisAyarları.resx">
+      <DependentUpon>frmUygulamaGirisAyarları.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frYöneticiVeYetkiliGirism.resx">
+      <DependentUpon>frYöneticiVeYetkiliGirism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciSilme.resx">
+      <DependentUpon>OgrenciSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciUcretIslemleri.resx">
+      <DependentUpon>OgrenciUcretIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SifremiUnuttum.resx">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\kimlik\FıratDershaneOtomasyonu.kimlik.TCKimlikNoDogrulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\kimlik\KPSPublic.wsdl" />
+    <None Include="FıratDershaneOtomasyonDataSet.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet1.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet1.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet2.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet2.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet3.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet3.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet4.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet4.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet5.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet5.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet6.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet6.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet7.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet7.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet8.xsc">
+      <DependentUpon>FıratDershaneOtomasyonDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FıratDershaneOtomasyonDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FıratDershaneOtomasyonDataSet8.xss">
+      <DependentUpon>FıratDershaneOtomasyonDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\kimlik\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\kimlik\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\kimlik\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\kimlik\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
